@@ -9,13 +9,6 @@ import org.aspectj.lang.annotation.Pointcut;
 
 import aop.hcf.com.aoplibrary.annotation.LogTrace;
 
-/**
- * 作者：HuChangfu on 2017/1/20.
- * 邮箱：changfu.hu@lvmama.com
- * 版本：7.9.0
- * 描述：xxx
- */
-
 @Aspect
 public class LogAspect {
 
