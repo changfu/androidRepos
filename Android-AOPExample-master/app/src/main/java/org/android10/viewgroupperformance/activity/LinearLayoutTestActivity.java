@@ -1,0 +1,39 @@
+/**
+ * Copyright (C) 2014 android10.org. All rights reserved.
+ * @author Fernando Cejas (the android10 coder)
+ */
+package org.android10.viewgroupperformance.activity;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
+
+import org.android10.gintonic.annotation.DebugTrace;
+import org.android10.viewgroupperformance.R;
+
+/**
+ *
+ */
+public class LinearLayoutTestActivity extends Activity {
+
+  private LinearLayout myLinearLayout;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_linear_layout_test);
+
+    myLinearLayout = (LinearLayout) findViewById(R.id.linearLayoutOne);
+    myLinearLayout.invalidate();
+
+    myLinearLayout.setOnClickListener(new View.OnClickListener() {
+      @Override
+      @DebugTrace
+      public void onClick(View v) {
+        Log.e("myTag", "abc");
+      }
+    });
+  }
+}
